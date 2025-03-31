@@ -1,0 +1,33 @@
+{
+	"name": "cljs-projects",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"start": "clojure -M:shadow watch app",
+		"watch-all": "clojure -M:shadow watch app test-browser",
+		"build": "clojure -M:shadow release app",
+		"build-verbose": "clojure -M:shadow release --verbose app",
+		"report": "clojure -M:shadow run shadow.cljs.build-report app report.html",
+		"debug-build": "clojure -M:shadow release app --debug",
+		"serve": "serve --single public --listen 5000",
+		"dev-build": "clojure -M:shadow compile app",
+		"repl": "clojure -M:shadow cljs-repl app",
+		"browser-repl": "clojure -M:shadow browser-repl",
+		"clojure-repl": "clojure -M:shadow clj-repl",
+		"test": "clojure -M:shadow watch test",
+		"test-browser": "clojure -M:shadow watch test-browser",
+		"test-once": "clojure -M:shadow compile test",
+		"clean": "rimraf public/js",
+		"nuke": "rimraf public/js .shadow-cljs node_modules yarn.lock package-lock.json out report.html",
+		"shadow-cljs-server": "clojure -M:shadow server"
+	},
+	"devDependencies": {
+		"rimraf": "^3.0.2",
+		"serve": "^11.3.2",
+		"shadow-cljs": "2.11.18"
+	},
+	"dependencies": {
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	}
+}
