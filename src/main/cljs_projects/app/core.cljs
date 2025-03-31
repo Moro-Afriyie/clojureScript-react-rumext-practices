@@ -18,7 +18,8 @@
 (ns cljs-projects.app.core
   (:require
    [goog.dom :as gdom]
-   [rumext.v2 :as mf]))
+   [rumext.v2 :as mf]
+   [cljs-projects.app.counter.counter :as app-counter]))
 
 
 (mf/defc title [{:keys [name]}]
@@ -27,8 +28,8 @@
 
 (mf/defc app []
   [:div
-   [:h1 "My Rumext App"]
-   (mf/element title #js {:name "title component"})])  
+  ;;  (mf/element title #js {:name "title component"})
+   (mf/element  app-counter/counter)])  
 
 
 (defonce root-el (gdom/getElement "root"))
