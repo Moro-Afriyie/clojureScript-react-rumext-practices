@@ -15,6 +15,7 @@
 ;; (ns cljs-projects.app.core
 ;;   (:require [rumext.v2 :as mf]))  ;; Ensure correct import for Rumext
 
+;; main application
 
 (ns cljs-projects.app.core
   (:require
