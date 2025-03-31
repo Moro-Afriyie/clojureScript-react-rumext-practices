@@ -19,8 +19,8 @@
   (:require
    [goog.dom :as gdom]
    [rumext.v2 :as mf]
-   [cljs-projects.app.counter.counter :as app-counter]))
-
+   [cljs-projects.app.counter.counter :as app-counter]
+   [cljs-projects.app.markdown-previewer.core :as app-markdown-previewer]))
 
 (mf/defc title [{:keys [name]}]
   [:div {:class "label"} name])
@@ -29,7 +29,9 @@
 (mf/defc app []
   [:div
   ;;  (mf/element title #js {:name "title component"})
-   (mf/element  app-counter/counter)])  
+  ;;  (mf/element  app-counter/counter)
+   (mf/element app-markdown-previewer/markdown-previewer)
+   ])  
 
 
 (defonce root-el (gdom/getElement "root"))

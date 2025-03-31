@@ -1,12 +1,12 @@
 /* Minimal Reset CSS */
 
 html {
-  box-sizing: border-box;
-  font-size: 16px;
+	box-sizing: border-box;
+	font-size: 16px;
 }
 
 * {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body,
@@ -19,11 +19,30 @@ h6,
 p,
 ol,
 ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+.markdown-content {
+	display: flex;
+	gap: 3rem;
+}
+
+.markdown-content .markdown-editor-container textarea {
+	resize: vertical;
+}
+
+.markdown-content .previewer-container {
+	flex-grow: 1;
+}
+
+.previewer-container h1,
+.markdown-editor-container h1 {
+	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
