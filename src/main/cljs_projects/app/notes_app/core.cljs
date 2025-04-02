@@ -44,7 +44,7 @@
                         (save-to-storage updated-notes)))]
 
     [:div
-     [:h1 {:class "text-center text-4xl font-bold" :style {:margin-top "1rem"}} "Notes App"]
+     [:h1 {:class "text-center text-4xl font-bold" :style {:margin-top "1rem"}} "Simple Notes App"]
      (app-note-modal/notes-modal #js {:note selected-note :set-open-modal set-open-modal :open-modal open-modal :add-note add-note})
      [:div {:class "flex items-center justify-center mt-20"}
       [:div {:class "flex gap-6 flex-wrap bg-gray-200 border border-gray-300 w-[90vw] min-h-50 rounded-2xl p-4"}
