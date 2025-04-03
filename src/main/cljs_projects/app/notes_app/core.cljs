@@ -34,6 +34,7 @@
                         (set-notes updated-notes)
                         (save-to-storage updated-notes)))
 
+        ;; (set-notes (filterv #(not (= (:id %) target-id)) notes))
         update-note (fn [{:keys [id title description]}]
                       (let [updated-notes (mapv (fn [note]
                                                   (if (= (:id note) id)
