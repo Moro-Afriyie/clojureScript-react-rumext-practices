@@ -21,14 +21,16 @@
    [rumext.v2 :as mf]
    [cljs-projects.app.counter.counter :as app-counter]
    [cljs-projects.app.markdown-previewer.core :as app-markdown-previewer]
-   [cljs-projects.app.notes-app.core :as app-notes]))
+   [cljs-projects.app.notes-app.core :as app-notes]
+   [cljs-projects.app.weather-app.core :as app-weather]))
 
 
 (mf/defc app []
   [:div
   ;;  (mf/element  app-counter/counter)
   ;;  (mf/element app-markdown-previewer/markdown-previewer)
-   (mf/element app-notes/notes-app)
+  ;;  (mf/element app-notes/notes-app)
+   (mf/element app-weather/weather-app)
    ])  
 
 
