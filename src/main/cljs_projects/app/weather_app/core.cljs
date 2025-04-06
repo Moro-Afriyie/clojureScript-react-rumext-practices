@@ -121,9 +121,6 @@
              "bg-gradient-to-b from-[#005a9c] to-[#f59e42] flex items-center justify-center min-h-screen flex items-center justify-center text-white font-sans text-xl"} [:p "loading data...."]]
       (let [{:keys [main weather name wind]} weather-data
             weather-cond1 (-> weather first)]
-        (js/console.log "main: " (clj->js main))
-        (js/console.log "weather: " (clj->js (:main weather-cond1)))
-        (js/console.log "name: " name)
         [:div
          [:div
           {:class
