@@ -22,7 +22,7 @@
    [cljs-projects.app.counter.counter :as app-counter]
    [cljs-projects.app.markdown-previewer.core :as app-markdown-previewer]
    [cljs-projects.app.notes-app.core :as app-notes]
-   [cljs-projects.app.weather-app.core :as app-weather]))
+   [cljs-projects.app.weather-app.core :refer [weather-app]])) ;; refer allows you to import the function you need from the component
 
 
 (mf/defc app []
@@ -30,7 +30,8 @@
   ;;  (mf/element  app-counter/counter)
   ;;  (mf/element app-markdown-previewer/markdown-previewer)
   ;;  (mf/element app-notes/notes-app)
-   (mf/element app-weather/weather-app)
+  ;; (mf/element app-weather/weather-app)
+   [:> weather-app] ;; short form of loading the component with (mf/element) the react way
    ])  
 
 
