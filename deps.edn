@@ -4,6 +4,7 @@
         {:git/url "https://github.com/funcool/rumext.git"
          :git/tag "v2.20"
          :git/sha "7f5e1cd"}
-        binaryage/devtools {:mvn/version "1.0.2"}}
+        binaryage/devtools {:mvn/version "1.0.2"}
+        cljs-http/cljs-http {:mvn/version "0.1.48"}}
  :aliases {:shadow {:extra-deps {thheller/shadow-cljs {:mvn/version "2.25.5"}}
                     :main-opts ["-m" "shadow.cljs.devtools.cli"]}}}
